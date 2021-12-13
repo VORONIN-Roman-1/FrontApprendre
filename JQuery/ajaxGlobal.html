@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script> -->
+    <script src=" https://releases.jquery.com/git/jquery-3.x-git.min.js "></script>
+</head>
+<body>
+
+    <button>Жми1</button>
+    <button>Жми2</button>
+    <p id="result"></p>
+    <div id="log"></div>
+     
+    <script type="text/javascript">
+    $(document)
+    .ajaxStart(function() {
+        $("#log").append("<p>Начало запроса</p>" );
+    })
+    .ajaxSend(function(event, jqxhr, settings) {
+        $("#log").append("<p>Запрос отправлен по адресу: "+settings.url+"</p>" );
+    })
+    .ajaxStop(function() {
+        $("#log").append("<p>Все запросы завершены</p>" );
+    })
+    .ajaxError(function(event, jqxhr, settings) {
+        $("#log").append("<p>Ошибка при выполнении запроса</p>" );
+    })
+    .ajaxComplete(function(event, jqxhr, settings) {
+        $("#log").append("<p>Запрос завершен</p>" );
+    })
+    .ajaxSuccess(function(event, jqxhr, settings) {
+        $("#log").append("<p>С сервера получены данные: "+jqxhr.responseText+"</p>" );
+    });
+    $('button').click(function() {
+        $("#result").load('ajax.php');
+    });
+    </script>
+</body>
+</html>

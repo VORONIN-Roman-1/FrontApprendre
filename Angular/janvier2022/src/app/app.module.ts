@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TestComponent } from './test.compenent';
 import { PreviewModule } from './codin';
 import { TestLifeCycleComponent } from './test-life-cycle.component/test-life-cycle.component.component';
+import { ChoixDirective } from './choix.directive';
 
 // определение маршрутов
 const appRoutes: Routes =[
@@ -26,6 +27,7 @@ const appRoutes: Routes =[
     TestLifeCycleComponent,
     AboutComponent,
     TestComponent,
+    ChoixDirective
     
   ],
   imports: [

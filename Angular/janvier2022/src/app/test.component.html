@@ -1,0 +1,49 @@
+
+<H1>hello {{title}}</H1>
+<!-- personnage?.name //покажет если существует свойство-->
+<p>je m'appele {{personnage?.name}}. J'ai {{personnage.age}} ID {{personnage.id| currency }} age</p>
+
+Books: <p *ngFor="let book of books">{{book}}</p>
+
+Title: <p style="display:inline" [textContent]="title"></p><br>
+function show: <p style="display:inline" [textContent]="show('y')"></p>
+
+
+<p>propriété d'attribut</p>
+
+Input value binding from class.ts: <input value="{{employee.firstname}}" id="attrProp"
+style="display:inline"/><br>
+p.title binding: <p #p3 [title]="employee.firstname"
+style="display:inline">{{p3.title}} </p><br>
+p.id binding: <p #p4 [id]="employee.firstname"
+style="display:inline">{{p4.id}}</p><br>
+label.title binding (without #id) return app title: <label
+[title]="employee.firstname" style="display:inline">{{title}}</label><br>
+label.title binding : <label #p5 [title]="employee.firstname">{{p5.title}}</label><br>
+div.title binding : <div #p6 [title]="employee.role"
+style="display:inline">{{p6.title}}</div>
+p.innerHTML : <p [innerHTML]="localPath" style="display:inline"></p><br>
+span.innerHTML : <span [innerHTML]="color" style="display:inline"></span><br>
+<p>propriété de la classe</p>
+<div [class.special]="isSpecial">Special</div>
+<p>propriété de style </p>
+propriété de style :
+<button [style.color]="isSpecial ? 'red' : 'green'"> Click Me!</button>
+
+<input (keyup)="onKey($event)"
+style=" width:300px; height:100px;">
+<p> {{ valueTS }}</p>
+
+
+<input #box (keyup)="onKey2(box.value)"> local
+<p> {{ box.value }}</p>
+
+<input #boxi (keyup)="onKey2(boxi.value)">
+<p> {{ valueTS }}</p>
+
+
+<h3>blur event: </h3>
+<input #box2 (blur)="onBlur(box2.value)" >
+<p>onKey() event : {{ entry }}</p>
+<p>template reference:
+{{ box2.value }}</p>

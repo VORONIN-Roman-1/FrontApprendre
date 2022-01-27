@@ -1,5 +1,9 @@
-import { Employee } from './employee';
+import { Employee } from '../../employee';
 import { Component } from '@angular/core';
+//для работы fr в pipe
+import { registerLocaleData } from '@angular/common';
+import localFr from '@angular/common/locales/fr';
+registerLocaleData(localFr, 'fr');
 
 @Component({
   selector: 'app-root',

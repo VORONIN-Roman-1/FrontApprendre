@@ -1,7 +1,8 @@
 
 <H1>hello {{title}}</H1>
 <!-- personnage?.name //покажет если существует свойство-->
-<p>je m'appele {{personnage?.name}}. J'ai {{personnage.age}} ID {{personnage.id| currency }} age</p>
+
+<p>je m'appele {{personnage?.name| uppercase}}. J'ai {{personnage.age}} ID {{personnage.id| currency:'EUR':'symbol':'.2-2':'fr' }} age</p>
 
 Books: <p *ngFor="let book of books">{{book}}</p>
 
@@ -19,7 +20,7 @@ p.id binding: <p #p4 [id]="employee.firstname"
 style="display:inline">{{p4.id}}</p><br>
 label.title binding (without #id) return app title: <label
 [title]="employee.firstname" style="display:inline">{{title}}</label><br>
-label.title binding : <label #p5 [title]="employee.firstname">{{p5.title}}</label><br>
+label.title binding : <label #p5 [title]="employee.firstname"><b>{{p5.title|cap}}</b></label><br>
 div.title binding : <div #p6 [title]="employee.role"
 style="display:inline">{{p6.title}}</div>
 p.innerHTML : <p [innerHTML]="localPath" style="display:inline"></p><br>
@@ -36,10 +37,10 @@ style=" width:300px; height:100px;">
 
 
 <input #box (keyup)="onKey2(box.value)"> local
-<p> {{ box.value }}</p>
+<p> {{ box.value|cap }}</p>
 
 <input #boxi (keyup)="onKey2(boxi.value)">
-<p> {{ valueTS }}</p>
+<p> {{ valueTS|cap }}</p>
 
 
 <h3>blur event: </h3>

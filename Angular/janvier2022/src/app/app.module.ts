@@ -12,6 +12,8 @@ import { TestLifeCycleComponent } from './test/test-life-cycle.component/test-li
 //import { CapPipe } from './cap.pipe';
 import { TestModule } from './test/test.module';
 import { AppRoutingModule } from './app-routing.module';
+import { TestParentComponent } from './test/test-parent/test-parent.component';
+import { TestChildComponent } from './test/test-child/test-child.component';
 
 
 // определение маршрутов
@@ -30,6 +32,8 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     //TestLifeCycleComponent,
     AboutComponent,
+ 
+
    // TestComponent,
    // ChoixDirective,
   //  CapPipe

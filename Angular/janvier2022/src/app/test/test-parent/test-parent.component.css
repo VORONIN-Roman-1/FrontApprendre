@@ -1,0 +1,12 @@
+:host {
+
+    font-style: italic;
+  }
+.isDark{
+    background-color: blue;
+    color: cornsilk;
+}
+.isRed{
+    background-color: rgb(240, 17, 17);
+    color: rgb(20, 241, 12);
+}

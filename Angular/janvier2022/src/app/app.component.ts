@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   template: `Main 
   <a id="menu1" href="/home">Home</a> <br>
   <a id="menu2" href="/about">About</a>v
-  <a id="test" href="/test">Test</a>
-  <a id="testParent" href="/testParent">testParent</a>
-  <a id="testLife" href="/testLife">Test Life</a>
+  <a id="test" href="/test">Test</a><br>
+  <a id="testParent" href="/testParent">testParent</a><br>
+  <a id="testLife" href="/testLife">Test Life</a><br>
   <router-outlet></router-outlet>
   `
 

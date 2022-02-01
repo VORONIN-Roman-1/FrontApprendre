@@ -1,4 +1,19 @@
+<div [class.isDark]="isDark" [class.isRed]="isRed">
 <p>test-parent works!</p>
-<app-test-child [name]="nameParent" [age]="ageParent">Дратуте </app-test-child>
+<!-- <app-test-child [name]="nameParent" [age]="ageParent"  (onChangedDarkChildren)=onChangeDark($event) (onChangedRedChildren)=onChangeRed($event)>Дратуте </app-test-child> -->
+<!-- <app-test-child [name]="nameParent" [age]="ageParent" [(isDarkChildren)]="isDark"  (onChangedDarkChildren)=onChangeDark($event) (onChangedRedChildren)=onChangeRed($event)>Дратуте </app-test-child> -->
+<app-test-child [name]="nameParent" [age]="ageParent"
+ [(isDarkChildren)]="isDark"  
+ [(isDarkChildrenModel)]="isDark" 
+ (onChangedDarkChildren)=onChangeDark($event) 
+ (onChangedRedChildren)=onChangeRed($event)>Дратуте 
+</app-test-child>
+
 <input type="text" [(ngModel)]="nameParent">
-<input type="text" [(ngModel)]="ageParent">
+<input type="text" [(ngModel)]="ageParent"> <br>
+
+<input type="checkbox" id="dark" name= "dark" [(ngModel)]="isDark">
+<label for="dark">DARK</label>
+<input type="checkbox" id="red" name= "red" [(ngModel)]="isRed">
+<label for="dark">Red</label>
+</div>

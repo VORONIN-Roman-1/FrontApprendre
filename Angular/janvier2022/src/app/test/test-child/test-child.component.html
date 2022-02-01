@@ -1,4 +1,19 @@
 
 <p>test-child works!</p>
 <p>Salut {{name}} tu as {{age}} age</p>
-<ng-content></ng-content>
+<ng-content></ng-content> <br>
+<input type="checkbox" id="darkChildren" name= "darkChildren" 
+    [ngModel]="isDarkChildren" 
+    (change)="checkValueDark($event)">
+<label for="darkChildren">darkChildren</label>
+
+<input type="checkbox" id="darkChildrenModel" name= "darkChildrenModel" 
+    [ngModel]="isDarkChildrenModel" 
+    (ngModelChange)="checkValueDarkModel($event)">
+    <!-- или так !!! (change)="checkValueDarkModel2($event)">   -->
+<label for="darkChildrenModel">darkChildrenModel</label>
+
+<input type="checkbox" id="redChildren" name= "redChildren"
+    [(ngModel)]="isRedChildren" 
+    (change)="checkValueRed(isRedChildren?'A':'B')">
+<label for="redChildren">redChildren one way</label> <br>

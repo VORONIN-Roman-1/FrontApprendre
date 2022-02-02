@@ -4,6 +4,7 @@ import { AboutComponent } from './about.component';
 import { DisplayComponent } from './codin-game/display/display.component';
 
 import { HomeComponent } from './home.component';
+import { FeuComponent } from './test/feu/feu.component';
 import { TestComponent } from './test/test-common/test.compenent';
 import { TestLifeCycleComponent } from './test/test-life-cycle.component/test-life-cycle.component.component';
 import { TestParentComponent } from './test/test-parent/test-parent.component';
@@ -16,7 +17,8 @@ const routes: Routes = [
 //  { path: '', component:  AppComponent},
 { path: 'home', component: HomeComponent },
 { path: 'testLife', component: TestLifeCycleComponent },
-{ path: 'display', component: DisplayComponent }];
+{ path: 'display', component: DisplayComponent },
+{ path: 'feu', component: FeuComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

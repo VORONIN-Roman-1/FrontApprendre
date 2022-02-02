@@ -7,6 +7,7 @@ import { ChoixDirective } from './choix.directive';
 import { TestParentComponent } from './test-parent/test-parent.component';
 import { TestChildComponent } from './test-child/test-child.component';
 import { FormsModule } from '@angular/forms';
+import { FeuComponent } from './feu/feu.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     TestParentComponent,
     TestChildComponent,
     ChoixDirective,
-    CapPipe],
+    CapPipe,
+    FeuComponent],
     
   imports: [
     CommonModule,

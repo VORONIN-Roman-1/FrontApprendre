@@ -1,0 +1,50 @@
+<p>feu works!</p>
+<div class="feuConstr">
+    <svg *ngIf="isRed">
+        <circle cx="25" cy="25" r="25" [attr.fill]="colors[0]" />
+    </svg>
+</div>
+<div class="feuConstr">
+    <svg *ngIf="isYellow">
+        <circle cx="25" cy="25" r="25" [attr.fill]="colors[1]" />
+    </svg>
+</div>
+<div class="feuConstr">
+    <svg  *ngIf="isGreen">
+        <circle cx="25" cy="25" r="25" [attr.fill]="colors[2]" />
+    </svg>
+</div>
+
+<div>
+    <input type="radio" id="stop" name="feu" [value]= "statusAll[0]" [(ngModel)]="status" (ngModelChange)="verifierStatus()">
+    <label for="stop">Aller</label>
+    <input type="radio" id="attention" name="feu"[value]= "statusAll[1]" [(ngModel)]="status" (ngModelChange)="verifierStatus()">
+    <label for="attention">Attention</label>
+    <input type="radio" id="aller" name="feu" [value]= "statusAll[2]" [(ngModel)]="status" (change)="verifierStatus()">
+    <label for="aller">STOP</label>
+</div>
+    <button (click)="changeStatus()">Change</button>`
+    <button (click)='startTimer()'>Automatique</button>
+<button (click)='pauseTimer()'>Pause</button>
+
+
+<!-- <div class="base-timer">
+    <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <g class="base-timer__circle">
+        <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45" />
+      </g>
+    </svg>
+    <span>
+
+    </span>
+</div> -->
+<!-- <div class="base-timer">
+    <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <g class="base-timer__circle">
+        <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45" />
+      </g>
+    </svg>
+    <span>
+
+    </span>
+</div> -->

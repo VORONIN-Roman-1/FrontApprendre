@@ -1,4 +1,5 @@
-<div [class.isDark]="isDark" [class.isRed]="isRed">
+<!-- <div [class.isDark]="isDark" [class.isRed]="isRed">  тоже самое что и следующая строка--> 
+<div [ngClass]="{isDark:isDark,isRed:isRed}">
 <p>test-parent works!</p>
 <!-- <app-test-child [name]="nameParent" [age]="ageParent"  (onChangedDarkChildren)=onChangeDark($event) (onChangedRedChildren)=onChangeRed($event)>Дратуте </app-test-child> -->
 <!-- <app-test-child [name]="nameParent" [age]="ageParent" [(isDarkChildren)]="isDark"  (onChangedDarkChildren)=onChangeDark($event) (onChangedRedChildren)=onChangeRed($event)>Дратуте </app-test-child> -->

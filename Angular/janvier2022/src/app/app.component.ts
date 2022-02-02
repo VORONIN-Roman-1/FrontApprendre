@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
   <a id="test" href="/test">Test</a><br>
   <a id="testParent" href="/testParent">testParent</a><br>
   <a id="testLife" href="/testLife">Test Life</a><br>
+  <a id="display" href="/display">display</a><br>
   <router-outlet></router-outlet>
   `
 

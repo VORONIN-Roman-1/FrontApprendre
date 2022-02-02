@@ -14,6 +14,7 @@ import { TestModule } from './test/test.module';
 import { AppRoutingModule } from './app-routing.module';
 import { TestParentComponent } from './test/test-parent/test-parent.component';
 import { TestChildComponent } from './test/test-child/test-child.component';
+import { CodinGameModule } from './codin-game/codin-game.module';
 
 
 // определение маршрутов
@@ -43,6 +44,7 @@ import { TestChildComponent } from './test/test-child/test-child.component';
     BrowserModule, PreviewModule,
      //RouterModule.forRoot(appRoutes), 
      TestModule,
+     CodinGameModule,
      AppRoutingModule
   ],
   providers: [],

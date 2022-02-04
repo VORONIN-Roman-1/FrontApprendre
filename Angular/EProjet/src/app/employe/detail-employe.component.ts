@@ -20,4 +20,8 @@ export class DetailEmployeComponent implements OnInit {
   goBack(): void {
     this.router.navigate(['/employes']);
   }
+  goEdit(employe : Employe): void {
+    let link = ['/employe/edit', employe.id];
+    this.router.navigate(link);
+    }
 }

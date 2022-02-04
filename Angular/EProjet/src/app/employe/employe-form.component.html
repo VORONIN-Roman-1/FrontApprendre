@@ -1,0 +1,52 @@
+<form *ngIf="employe" (ngSubmit)="onSubmit()" #employeForm="ngForm">
+    <div class="row">
+        <div class="col s8 offset-s2">
+            <div class="card-panel">
+                <!-- Employe name -->
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" class="form-control" id="name" required pattern="^[a-zA-Z0-9àéèç]{1,25}$"
+                        [(ngModel)]="employe.name" name="name" [(ngModel)]="employe.name" name="name" #name="ngModel" />
+                    <div [hidden]="name.valid || name.pristine" class="card-panel red accent-1"> Le nom de l'employe est
+                        requis (1-25).
+                    </div>
+                </div>
+                <!-- Employe picture -->
+                <div class="form-group">
+                    <label for="picture">Image</label>
+                    <input type="text" class="form-control" id="picture" [(ngModel)]="employe.picture" name="picture"
+                        #name="ngModel" />
+                </div>
+                <!-- Employe level -->
+                <div class="form-group">
+                    <label for="level">niveau</label>
+                    <input type="number" class="form-control" id="level" required pattern="^[0-5]{1,1}$"
+                        [(ngModel)]="employe.level" name="level" #level="ngModel" />
+                    <div [hidden]="level.valid || level.pristine" class="card-panel red accent-1"> Le niveau doit être
+                        compris entre 0 et 5.
+                    </div>
+                </div>
+                <!-- Employe roles -->
+                <div class="form-group">
+                    <label for="roles">Roles</label>
+                    <div *ngFor="let role of roles" class="row">
+                        <input type="checkbox" class="filled-in" id="{{ role }}" [value]="role"
+                            [checked]="hasRole(role)" (change)="selectRole($event, role)"
+                            [disabled]="!isRolesValid(role)" />
+                        <label [attr.for]="role">
+                            <span class="{{ role | employeRoleColor }}">{{ role }}</span>
+                        </label>
+                    </div>
+                </div>
+                <!-- Submit button -->
+                <div class="divider"></div>
+                <div class="section center">
+                    <button type="submit" class="waves-effect waves-light btn" [disabled]="!employeForm.form.valid">
+                        Valider
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<h3 *ngIf="!employe" class="center">Aucun employe à éditer...</h3>

@@ -4,8 +4,8 @@ import { EmployeService } from './employe.service';
 import { Employe } from './employe';
 @Component({
     selector: 'employe-form',
-    templateUrl: './app/employe/employe-form.component.html',
-    styleUrls: ['./app/employe/employe-form.component.css']
+    templateUrl: './employe-form.component.html',
+    styleUrls: ['./employe-form.component.css']
 })
 export class EmployeFormComponent implements OnInit {
     @Input() employe: Employe; // propriété d'entrée du composant
@@ -40,5 +40,16 @@ export class EmployeFormComponent implements OnInit {
         console.log("Submit form !");
         let link = ['/employe', this.employe.id];
         this.router.navigate(link);
+    }
+
+    // Valide le nombre de roles pour chaque employe
+    isRolesValid(role: string): boolean {
+        if (this.employe.roles.length === 1 && this.hasRole(role)) {
+            return false;
+        }
+        if (this.employe.roles.length >= 3 && !this.hasRole(role)) {
+            return false;
+        }
+        return true;
     }
 }

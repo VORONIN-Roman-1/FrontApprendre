@@ -10,6 +10,8 @@ import { EmployeService } from './employe.service';
 import { EditEmployeComponent } from './edit-employe.component';
 import { EmployeFormComponent } from './employe-form.component';
 import { EmployeRoutingModule } from './employe-routing.module';
+import { EmployeSearchComponent } from './search-employe.component';
+import { LoaderComponent } from './loader.component';
 @NgModule({
 imports: [
 CommonModule,
@@ -21,6 +23,8 @@ declarations: [
 ListEmployeComponent,
 DetailEmployeComponent,
 EmployeFormComponent,
+EmployeSearchComponent,
+LoaderComponent,
 EditEmployeComponent,
 PourtourDirective,
 EmployeRoleColorPipe

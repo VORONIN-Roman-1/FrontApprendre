@@ -15,13 +15,18 @@ export class DetailEmployeComponent implements OnInit {
     private employeService: EmployeService) { }
   ngOnInit(): void {
     let id = +this.route.snapshot.paramMap.get('id');
-    this.employe = this.employeService.getEmploye(id);
+    this.employeService.getEmploye(id)
+      .subscribe(employe => this.employe = employe);
   }
   goBack(): void {
     this.router.navigate(['/employes']);
   }
-  goEdit(employe : Employe): void {
+  goEdit(employe: Employe): void {
     let link = ['/employe/edit', employe.id];
     this.router.navigate(link);
+  }
+  delete(employe: Employe) : void {
+    this.employeService.deleteEmploye(employe)
+    .subscribe(_ => this.goBack());
     }
 }

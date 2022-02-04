@@ -6,17 +6,22 @@ import { EmployeService } from './employe.service';
 @Component({
   selector: 'list-employe',
   templateUrl: './list-employe.component.html',
-  
+
 })
 export class ListEmployeComponent implements OnInit {
   employes: Employe[];
-  constructor(private router: Router, private employeService: EmployeService){}
-  ngOnInit() {
-    this.employes= this.employeService.getEmployes();
+  constructor(private router: Router, private employeService: EmployeService) { }
+  ngOnInit(): void {
+    this.getEmployes();
   }
-  selectEmploye(employe : Employe){
+  getEmployes(): void {
+    this.employeService.getEmployes()
+      .subscribe(employes => this.employes =
+        employes);
+  }
+  selectEmploye(employe: Employe) {
     //alert("vous avez cliqué sur l'employé : "+employe.name)
     let link = ['/employe', employe.id];
     this.router.navigate(link);
-    }
+  }
 }

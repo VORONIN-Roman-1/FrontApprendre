@@ -38,6 +38,10 @@ export class EmployeFormComponent implements OnInit {
     // La méthode appelée lorsque le formulaire est soumis.
     onSubmit(): void {
         console.log("Submit form !");
+        this.employeService.updateEmploye(this.employe)
+            .subscribe(() => this.goBack());
+    } 
+    goBack(): void {
         let link = ['/employe', this.employe.id];
         this.router.navigate(link);
     }

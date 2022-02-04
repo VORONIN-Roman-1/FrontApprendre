@@ -28,11 +28,15 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="card-action"> <a (click)="goBack()">Retour</a>
-                    <a (click)="goEdit(employe)">Editer</a>
+                <div class="card-action">
+                    <a (click)="goBack()" class="waves-effect waves-light btn">Retour</a>
+                    <a (click)="goEdit(employe)" class="waves-effect waves-light btn">Editer</a>
+                    <a (click)="delete(employe)">Supprimer</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<h4 *ngIf='!employe' class="center">Aucun employe à afficher !</h4>
+<h4 *ngIf='!employe' class="center">
+    <circle-loader></circle-loader>
+</h4>

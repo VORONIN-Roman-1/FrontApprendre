@@ -1,6 +1,9 @@
 <h1 class='center'>Employes css marerialize</h1>
 <div class='container'>
     <div class="row">
+
+        <employe-search></employe-search>
+
         <div *ngFor='let employe of employes' class="col s6 m4">
             <div class="card horizontal" (click)="selectEmploye(employe)" employePreSelect="red">
                 <div class="card-image">

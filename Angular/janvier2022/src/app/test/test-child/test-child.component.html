@@ -1,7 +1,15 @@
 
+<!-- обькт передается по ссылка а строка по значению -->
 <p>test-child works!</p>
 <p>Salut {{name}} tu as {{age}} age</p>
-<ng-content></ng-content> <br>
+<input type="text" id="nameChildren" name="nameChildren" [(ngModel)]="name">
+<label for="nameChildren">nameChildren</label>
+<input type="text" id="employeChildren" name="employeChildren" [(ngModel)]="employe.name">
+<label for="employeChildren">employeChildren</label> <br>
+
+
+
+<!-- <ng-content></ng-content> <br> -->
 <input type="checkbox" id="darkChildren" name= "darkChildren" 
     [ngModel]="isDarkChildren" 
     (change)="checkValueDark($event)">

@@ -11,6 +11,9 @@ import { FeuComponent } from './feu/feu.component';
 import { MetanitDirectiveComponent } from './metanit-directive/metanit-directive.component';
 import { ThemeDirectiveDirective } from './metanit-directive/theme-directive.directive';
 import { Metanitform1Component } from './forms/metanitform1/metanitform1.component';
+import { EditEmployeComponent } from './forms/ecole/edit-employe/edit-employe.component';
+import { EmployeFormComponent } from './forms/ecole/edit-employe/employe-form.component';
+
 
 
 @NgModule({
@@ -24,7 +27,11 @@ import { Metanitform1Component } from './forms/metanitform1/metanitform1.compone
     FeuComponent,
     MetanitDirectiveComponent,
     ThemeDirectiveDirective,
-    Metanitform1Component],
+    Metanitform1Component,
+    EditEmployeComponent,
+    EmployeFormComponent
+],
+    
     
   imports: [
     CommonModule,

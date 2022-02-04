@@ -5,6 +5,7 @@ import { DisplayComponent } from './codin-game/display/display.component';
 
 import { HomeComponent } from './home.component';
 import { FeuComponent } from './test/feu/feu.component';
+import { EditEmployeComponent } from './test/forms/ecole/edit-employe/edit-employe.component';
 import { Metanitform1Component } from './test/forms/metanitform1/metanitform1.component';
 import { MetanitDirectiveComponent } from './test/metanit-directive/metanit-directive.component';
 import { TestComponent } from './test/test-common/test.compenent';
@@ -22,6 +23,7 @@ const routes: Routes = [
 { path: 'display', component: DisplayComponent },
 { path: 'metanitDirective', component: MetanitDirectiveComponent },
 { path: 'metanitform1', component: Metanitform1Component },
+{ path: 'formEcole', component: EditEmployeComponent },
 { path: 'feu', component: FeuComponent }];
 
 @NgModule({

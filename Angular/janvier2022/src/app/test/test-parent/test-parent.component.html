@@ -1,17 +1,26 @@
 <!-- <div [class.isDark]="isDark" [class.isRed]="isRed">  тоже самое что и следующая строка--> 
 <div [ngClass]="{isDark:isDark,isRed:isRed}">
-<p>test-parent works!</p>
+<p>test-parent works!</p> 
+<p>PARENT NAME {{nameParent}}</p>
+<p>PARENT NAME object {{employeParent.name}}</p>
+<!-- <app-test-child [name]="nameParent" [age]="ageParent"  (onChangedDarkChildren)=onChangeDark($event) (onChangedRedChildren)=onChangeRed($event)>Дратуте </app-test-child> -->
 <!-- <app-test-child [name]="nameParent" [age]="ageParent"  (onChangedDarkChildren)=onChangeDark($event) (onChangedRedChildren)=onChangeRed($event)>Дратуте </app-test-child> -->
 <!-- <app-test-child [name]="nameParent" [age]="ageParent" [(isDarkChildren)]="isDark"  (onChangedDarkChildren)=onChangeDark($event) (onChangedRedChildren)=onChangeRed($event)>Дратуте </app-test-child> -->
 <app-test-child [name]="nameParent" [age]="ageParent"
+ [employe]= "employeParent"
  [(isDarkChildren)]="isDark"  
  [(isDarkChildrenModel)]="isDark" 
  (onChangedDarkChildren)=onChangeDark($event) 
  (onChangedRedChildren)=onChangeRed($event)>Дратуте 
 </app-test-child>
 
-<input type="text" [(ngModel)]="nameParent">
+<input id ="nameParent" type="text" [(ngModel)]="nameParent">
+<label for="nameParent"> nameParent</label>
 <input type="text" [(ngModel)]="ageParent"> <br>
+
+<input id ="employenameParent" type="text" [(ngModel)]="employeParent.name">
+<label for="employenameParent"> employenameParent</label>
+
 
 <input type="checkbox" id="dark" name= "dark" [(ngModel)]="isDark">
 <label for="dark">DARK</label>

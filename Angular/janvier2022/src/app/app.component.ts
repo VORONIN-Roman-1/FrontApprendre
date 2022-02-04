@@ -13,6 +13,7 @@ import { Component } from '@angular/core';
   <a id="feu" href="/feu">feu</a><br>
   <a id="metanitDirective" href="/metanitDirective">metanitDirective</a><br>
   <a id="metanitform1" href="/metanitform1">metanitform1</a><br>
+  <a id="formEcole" href="/formEcole">formEcole</a><br>
   <router-outlet></router-outlet>
   `
 

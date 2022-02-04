@@ -1,3 +1,4 @@
+import { Employe } from './../forms/ecole/edit-employe/Employe';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class TestParentComponent implements OnInit {
    nameParent:string = "Sveta";
    ageParent:number= 23;
+   employeParent:Employe;
+   
   constructor() { }
   isDark:boolean=false;
   isRed:boolean=false;
   ngOnInit(): void {
+    this.employeParent = {
+      
+      "name": "Dupont",
+      "age":24
+    };
   }
   onChangeDark(event:any){
     this.isDark=event;

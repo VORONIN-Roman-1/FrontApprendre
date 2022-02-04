@@ -1,3 +1,4 @@
+import { Employe } from './../forms/ecole/edit-employe/Employe';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -7,10 +8,12 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class TestChildComponent implements OnInit {
   isRedChildren:boolean=false;
+  // @Input() namename:string;
+  @Input()  employe :Employe;
   @Input()  isDarkChildren:boolean=false;
   @Input()  isDarkChildrenModel:boolean=false;
 
- @Input() name:string = "Ivan";
+ @Input()  name:string = "Ivan";
  _age:number=24;
  @Input() 
  set age(age : number) {

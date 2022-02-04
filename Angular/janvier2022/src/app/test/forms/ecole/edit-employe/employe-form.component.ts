@@ -6,6 +6,6 @@ import { Employe } from './employe';
 
 })
 export class EmployeFormComponent  {
-    @Input() employe: Employe; // propriété d'entrée du composant
-    @Input() name:string;
+    @Input() employe: Employe|undefined; // propriété d'entrée du composant
+    @Input() name:string| undefined;
 }

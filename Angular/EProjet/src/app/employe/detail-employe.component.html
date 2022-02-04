@@ -1,0 +1,37 @@
+<div *ngIf="employe" class="row">
+    <div class="col s12 m8 offset-m2">
+        <h2 class="header center">{{ employe.name }}</h2>
+        <div class="card horizontal hoverable">
+            <div class="card-image">
+                <img [src]="employe.picture">
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <table class="bordered striped">
+                        <tbody>
+                            <tr>
+                                <td>Nom</td>
+                                <td><strong>{{ employe.name }}</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Roles</td>
+                                <td>
+                                    <span *ngFor="let role of employe.roles" class="{{ role | employeRoleColor }}">{{
+                                        role }}
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Date de naissance</td>
+                                <td><em>{{ employe.birthDate | date:"dd/MM/yyyy" }}</em></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-action"> <a (click)="goBack()">Retour</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<h4 *ngIf='!employe' class="center">Aucun employe à afficher !</h4>

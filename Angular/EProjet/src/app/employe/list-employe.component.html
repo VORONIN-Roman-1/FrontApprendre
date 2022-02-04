@@ -1,0 +1,22 @@
+<h1 class='center'>Employes css marerialize</h1>
+<div class='container'>
+    <div class="row">
+        <div *ngFor='let employe of employes' class="col s6 m4">
+            <div class="card horizontal" (click)="selectEmploye(employe)" employePreSelect="red">
+                <div class="card-image">
+                    <img [src]="employe.picture">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <span>{{employe.name}}</span>
+                        <p><small>{{employe.birthDate |
+                                date : "dd/MM/yyyy"}}</small></p>
+                        <span *ngFor='let role of employe.roles' class='{{role|employeRoleColor}}'>
+                            {{role}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

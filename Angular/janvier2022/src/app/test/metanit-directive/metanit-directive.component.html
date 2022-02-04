@@ -1,0 +1,15 @@
+<p>metanit-directive works!</p>
+<div my>
+    <p >Привет directive</p>
+</div>
+<p *ngIf="condition;else unset">
+    Привет мир
+  </p>
+  <ng-template #unset>  
+    <p>Пока мир</p>  
+  </ng-template>  
+   
+  <div *ngIf="condition; then thenBlock else elseBlock"></div>   
+            <ng-template #thenBlock>Then template</ng-template>  
+            <ng-template #elseBlock>Else template</ng-template> 
+  <button (click)="toggle()">Toggle</button>

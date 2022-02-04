@@ -8,6 +8,9 @@ import { TestParentComponent } from './test-parent/test-parent.component';
 import { TestChildComponent } from './test-child/test-child.component';
 import { FormsModule } from '@angular/forms';
 import { FeuComponent } from './feu/feu.component';
+import { MetanitDirectiveComponent } from './metanit-directive/metanit-directive.component';
+import { ThemeDirectiveDirective } from './metanit-directive/theme-directive.directive';
+import { Metanitform1Component } from './forms/metanitform1/metanitform1.component';
 
 
 @NgModule({
@@ -18,7 +21,10 @@ import { FeuComponent } from './feu/feu.component';
     TestChildComponent,
     ChoixDirective,
     CapPipe,
-    FeuComponent],
+    FeuComponent,
+    MetanitDirectiveComponent,
+    ThemeDirectiveDirective,
+    Metanitform1Component],
     
   imports: [
     CommonModule,

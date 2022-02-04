@@ -5,6 +5,8 @@ import { DisplayComponent } from './codin-game/display/display.component';
 
 import { HomeComponent } from './home.component';
 import { FeuComponent } from './test/feu/feu.component';
+import { Metanitform1Component } from './test/forms/metanitform1/metanitform1.component';
+import { MetanitDirectiveComponent } from './test/metanit-directive/metanit-directive.component';
 import { TestComponent } from './test/test-common/test.compenent';
 import { TestLifeCycleComponent } from './test/test-life-cycle.component/test-life-cycle.component.component';
 import { TestParentComponent } from './test/test-parent/test-parent.component';
@@ -18,6 +20,8 @@ const routes: Routes = [
 { path: 'home', component: HomeComponent },
 { path: 'testLife', component: TestLifeCycleComponent },
 { path: 'display', component: DisplayComponent },
+{ path: 'metanitDirective', component: MetanitDirectiveComponent },
+{ path: 'metanitform1', component: Metanitform1Component },
 { path: 'feu', component: FeuComponent }];
 
 @NgModule({

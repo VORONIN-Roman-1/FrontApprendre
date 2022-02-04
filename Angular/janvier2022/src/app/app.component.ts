@@ -11,6 +11,8 @@ import { Component } from '@angular/core';
   <a id="testLife" href="/testLife">Test Life</a><br>
   <a id="display" href="/display">display</a><br>
   <a id="feu" href="/feu">feu</a><br>
+  <a id="metanitDirective" href="/metanitDirective">metanitDirective</a><br>
+  <a id="metanitform1" href="/metanitform1">metanitform1</a><br>
   <router-outlet></router-outlet>
   `
 

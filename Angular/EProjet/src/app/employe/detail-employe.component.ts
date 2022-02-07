@@ -19,8 +19,8 @@ export class DetailEmployeComponent implements OnInit {
       .subscribe(employe => this.employe = employe);
   }
   goBack(): void {
-    this.router.navigate(['/employes']);
-  }
+    this.router.navigate(['/employe/all']);
+    }
   goEdit(employe: Employe): void {
     let link = ['/employe/edit', employe.id];
     this.router.navigate(link);

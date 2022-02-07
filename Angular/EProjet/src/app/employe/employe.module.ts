@@ -12,6 +12,7 @@ import { EmployeFormComponent } from './employe-form.component';
 import { EmployeRoutingModule } from './employe-routing.module';
 import { EmployeSearchComponent } from './search-employe.component';
 import { LoaderComponent } from './loader.component';
+import { AuthGuard } from '../auth-guard.service';
 @NgModule({
 imports: [
 CommonModule,
@@ -29,6 +30,6 @@ EditEmployeComponent,
 PourtourDirective,
 EmployeRoleColorPipe
 ],
-providers: [EmployeService]
+providers: [EmployeService, AuthGuard]
 })
 export class EmployeModule { }
